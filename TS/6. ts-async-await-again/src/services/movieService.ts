@@ -1,4 +1,4 @@
-import type { Movie } from "../models/Movie";
+import type { MovieExt } from "../models/MovieExt";
 import type { OmdbResponse } from "../models/OmdbResponse";
 import { get } from "./serviceBase";
 
@@ -10,5 +10,5 @@ export const getMovies = async (searchText: string) => {
 };
 
 export const getMovieById = async (id: string) => {
-  return await get<Movie>(`${BASE_URL}i=${id}`);
+  return await get<MovieExt>(`${BASE_URL}i=${id}`);
 };
