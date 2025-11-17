@@ -94,3 +94,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+  .movie {
+    width: 20%;
+
+    .imgContainer {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

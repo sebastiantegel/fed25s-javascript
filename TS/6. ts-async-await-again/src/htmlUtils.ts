@@ -17,11 +17,13 @@ export const createHtml = (movies: Movie[]) => {
     img.src = movie.Poster;
     img.alt = movie.Title;
     title.innerHTML = movie.Title;
+    imgContainer.className = "imgContainer";
 
     movieContainer.addEventListener("click", async () => {
       const movieDetails = await getMovieById(movie.imdbID);
       console.log(movieDetails);
     });
+    movieContainer.className = "movie";
 
     imgContainer.appendChild(img);
     movieContainer.appendChild(title);
