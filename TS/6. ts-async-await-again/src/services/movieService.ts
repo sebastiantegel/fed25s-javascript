@@ -6,6 +6,7 @@ const BASE_URL = "https://omdbapi.com/?apikey=416ed51a&";
 
 export const getMovies = async (searchText: string) => {
   const response = await get<OmdbResponse>(`${BASE_URL}s=${searchText}`);
+  localStorage.setItem("movies", JSON.stringify(response.Search));
   return response.Search;
 };
 

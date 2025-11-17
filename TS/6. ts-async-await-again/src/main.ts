@@ -1,4 +1,5 @@
 import { createHtml } from "./htmlUtils";
+import type { Movie } from "./models/Movie";
 import { getMovies } from "./services/movieService";
 import "./style.css";
 
@@ -19,3 +20,6 @@ document.getElementById("searchForm")?.addEventListener("submit", async (e) => {
     (theInput as HTMLInputElement).value = "";
   }
 });
+
+const movies: Movie[] = JSON.parse(localStorage.getItem("movies") || "[]");
+createHtml(movies);
