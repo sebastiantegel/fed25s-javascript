@@ -16,28 +16,24 @@
     transform: rotate(45deg);
     animation: heartbeat 1s infinite;
 
-    &::after {
+    &::after,
+    &::before {
       content: "";
       position: absolute;
       background-color: red;
-
-      right: 50px;
-      bottom: 0;
       height: 100px;
       width: 100px;
       border-radius: 50%;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: red;
+    &::after {
+      right: 50px;
+      bottom: 0;
+    }
 
+    &::before {
       left: 0;
       bottom: 50px;
-      height: 100px;
-      width: 100px;
-      border-radius: 50%;
     }
   }
 }
