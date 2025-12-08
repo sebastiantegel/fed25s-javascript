@@ -1,6 +1,6 @@
 import type { Movie } from "./models/Movie";
 import type { OmdbResponse } from "./models/OmdbResponse";
-import "./style.css";
+import "./scss/style.scss";
 
 const numbers: number[] = [1, 5, 3, 1, 2, 8];
 const ascending = true;
@@ -58,3 +58,14 @@ const doubles = numbers.map((n) => {
 });
 
 console.log(doubles);
+
+// ? -> Querystring
+// ?firstname=Sebastian&lastname=Tegel
+
+// Querystring innehåller strukturen: variabelnamn=värde separerat med &
+
+document.getElementById("myForm")?.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // Hantera vad som händer vid submit (plocka ut datat från formuläret)
+});

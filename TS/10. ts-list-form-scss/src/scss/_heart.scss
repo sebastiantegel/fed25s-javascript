@@ -1,0 +1,43 @@
+@use "animations" as *;
+
+.heart-container {
+  width: 50%;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .heart {
+    position: relative;
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+    animation: heartbeat 1s infinite;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: red;
+
+      right: 50px;
+      bottom: 0;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: red;
+
+      left: 0;
+      bottom: 50px;
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+    }
+  }
+}

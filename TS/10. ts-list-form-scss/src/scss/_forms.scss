@@ -1,0 +1,40 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: $padding-lg;
+  gap: $padding-sm;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    line-height: $line-height;
+  }
+
+  button {
+    height: $button-size;
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: $secondary;
+    }
+  }
+
+  @include tablet() {
+    width: 50%;
+    margin: 0 auto;
+
+    button {
+      background-color: $primary;
+    }
+  }
+
+  @include desktop() {
+    width: 35%;
+  }
+}
